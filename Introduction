@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Malware Analysis | GitHub Pages</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        :root {
+            --bg: #020617;
+            --panel: #020617;
+            --border: #0f172a;
+            --text: #e5e7eb;
+            --muted: #94a3b8;
+            --accent: #38bdf8;
+        }
+
+        body {
+            margin: 0;
+            font-family: Consolas, Monaco, monospace;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        header {
+            padding: 60px 20px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.6em;
+            color: var(--accent);
+        }
+
+        header p {
+            max-width: 900px;
+            color: var(--muted);
+            font-size: 1.1em;
+        }
+
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            color: var(--accent);
+            border-left: 4px solid var(--accent);
+            padding-left: 12px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background: #020617;
+            padding: 4px 7px;
+            border-radius: 4px;
+            color: var(--accent);
+        }
+
+        .box {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        footer {
+            border-top: 1px solid var(--border);
+            text-align: center;
+            padding: 30px 20px;
+            color: var(--muted);
+            font-size: 0.9em;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Basic Malware Analysis</h1>
+    <p>
+        A beginner-friendly introduction to malware analysis concepts,
+        techniques, and tools used by reverse engineers and detection engineers.
+    </p>
+</header>
+
+<main>
+
+<section>
+    <h2>Overview</h2>
+    <p>
+        Malware analysis is the process of dissecting malicious software to
+        understand its behavior, functionality, and intent.
+        The insights gained help in detection, prevention, and incident response.
+    </p>
+</section>
+
+<section>
+    <h2>Analysis Types</h2>
+    <ul>
+        <li><strong>Static Analysis</strong> – Inspecting malware without executing it</li>
+        <li><strong>Dynamic Analysis</strong> – Observing runtime behavior in a sandbox</li>
+        <li><strong>Code Analysis</strong> – Reverse engineering assembly or decompiled code</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Basic Static Analysis</h2>
+    <ul>
+        <li>File hashes (MD5, SHA256)</li>
+        <li>Strings analysis</li>
+        <li>PE headers and imports</li>
+        <li>Packer and compiler detection</li>
+    </ul>
+
+    <div class="box">
+        Tools commonly used:
+        <ul>
+            <li><code>strings</code></li>
+            <li><code>Detect It Easy</code></li>
+            <li><code>PE-bear</code></li>
+            <li><code>Ghidra</code></li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <h2>Basic Dynamic Analysis</h2>
+    <ul>
+        <li>Process and thread creation</li>
+        <li>File system modifications</li>
+        <li>Registry persistence</li>
+        <li>Network traffic analysis</li>
+    </ul>
+
+    <div class="box">
+        Tools commonly used:
+        <ul>
+            <li><code>Process Monitor</code></li>
+            <li><code>Process Explorer</code></li>
+            <li><code>FakeNet-NG</code></li>
+            <li><code>Wireshark</code></li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <h2>Common Malware Techniques</h2>
+    <ul>
+        <li>Persistence via registry or scheduled tasks</li>
+        <li>Command and Control (C2)</li>
+        <li>Code injection</li>
+        <li>Credential harvesting</li>
+        <li>Anti-debugging and anti-VM checks</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Safe Analysis Practices</h2>
+    <div class="box">
+        <ul>
+            <li>Use isolated virtual machines</li>
+            <li>Disable shared folders and clipboard</li>
+            <li>Snapshot before execution</li>
+            <li>Never analyze malware on the host OS</li>
+        </ul>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    © 2026 • Malware Analysis • Hosted on GitHub Pages
+</footer>
+
+</body>
+</html>
